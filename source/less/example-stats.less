@@ -1,4 +1,6 @@
 .example-stats {
+  margin: 0;
+  margin-bottom: 37px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,6 +12,25 @@
   flex-direction: column;
 }
 
+.example-stats__count {
+  font-family: @theme-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+}
+
 .example-stats__desc {
-  margin: 0;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: -17px;
+  width: 87px;
+  padding-left: 14px;
+  padding-right: 14px;
+  background-color: #eaeaea;
+  z-index: 1;
+  text-transform: lowercase;
 }
