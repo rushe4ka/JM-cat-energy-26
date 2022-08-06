@@ -8,8 +8,16 @@
 }
 
 .example-stats__item {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 124px;
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example-stats__count {
@@ -22,15 +30,18 @@
 }
 
 .example-stats__desc {
-  font-size: 12px;
-  line-height: 100%;
-  text-align: center;
   position: absolute;
+  margin: 0;
   bottom: -17px;
   width: 87px;
   padding-left: 14px;
   padding-right: 14px;
-  background-color: #eaeaea;
   z-index: 1;
+
+  background-color: #eaeaea;
+
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
   text-transform: lowercase;
 }
