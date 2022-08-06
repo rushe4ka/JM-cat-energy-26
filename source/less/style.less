@@ -1,1 +1,108 @@
-// Начните писать стили здесь
+@import url("header/main-header.less");
+@import url("invitation.less");
+@import url("programs-list.less");
+@import url("program-preview.less");
+@import url("factoid.less");
+@import url("factoid-list.less");
+@import url("factoid-item.less");
+@import url("example.less");
+@import url("example-stats.less");
+@import url("slider-toggle.less");
+@import url("address.less");
+@import url("map.less");
+@import url("footer/main-footer.less");
+@import url("footer/social.less");
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldmedium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@theme-color: #68B738;
+@text-color: #444444;
+@theme-text-color: #ffffff;
+
+@theme-font: "Oswald", "Arial", sans-serif;
+@main-font: "Arial", sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  height: 100%;
+  background-color: #ffcaca;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #ffffff;
+  color: @text-color;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 280px;
+  margin: 0 auto;
+  outline: 1px solid rgb(175 79 255);
+}
