@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   </head>
   <body class="page__body">
-    <header class="main-header container">
+    <header class="main-header container" id="main">
       <a class="main-header__logo main-header__logo--cat" href="#">
         <img src="img/logo-cat.svg" alt="Логотип CAT Energy схематическое изображение кота." width="33" height="37" role="img">
       </a>
@@ -49,18 +49,12 @@
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="programs-list">
           <li class="programs-list__item program-preview">
-            <div class="program-preview__inner">
-              <img class="program-preview__icon" src="img/cat-slim.svg" alt="" width="50" height="53">
-              <h3 class="program-preview__title">Похудение</h3>
-            </div>
+            <h3 class="program-preview__title program-preview__title--slim">Похудение</h3>
             <p class="program-preview__desc">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="program-preview__link" href="catalog.html">Каталог SLIM</a>
           </li>
           <li class="programs-list__item program-preview">
-            <div class="program-preview__inner">
-              <img class="program-preview__icon" src="img/cat-pro.svg" alt="" width="67" height="50">
-              <h3 class="program-preview__title">Набор массы</h3>
-            </div>
+            <h3 class="program-preview__title program-preview__title--pro">Набор массы</h3>
             <p class="program-preview__desc">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="program-preview__link" href="catalog.html">Каталог PRO</a>
           </li>
@@ -71,28 +65,28 @@
         <h2 class="factoid__title">Как это работает</h2>
         <ol class="factoid__list factoid-list">
           <li class="factoid-list__item factoid-item">
-            <div class="factoid-item__icon-wrap">
+            <!--div class="factoid-item__icon-wrap">
               <img class="factoid-item__icon" src="img/icon-leaf.svg" alt="" width="30" height="32">
-            </div>
-            <p class="factoid-item__text">Функциональное питание содержит только полезные питательные вещества.</p>
+            </!--div-->
+            <p class="factoid-item__text factoid-item__text--1">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
           <li class="factoid-list__item factoid-item">
-            <div class="factoid-item__icon-wrap">
+            <!--div class="factoid-item__icon-wrap">
               <img class="factoid-item__icon" src="img/icon-tub.svg" alt="" width="29" height="31">
-            </div>
-            <p class="factoid-item__text">Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.</p>
+            </!--div-->
+            <p class="factoid-item__text factoid-item__text--2">Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.</p>
           </li>
           <li class="factoid-list__item factoid-item">
-            <div class="factoid-item__icon-wrap">
+            <!--div class="factoid-item__icon-wrap">
               <img class="factoid-item__icon" src="img/icon-eat.svg" alt="" width="25" height="30">
-            </div>
-            <p class="factoid-item__text">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</p>
+            </!--div-->
+            <p class="factoid-item__text factoid-item__text--3">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</p>
           </li>
           <li class="factoid-list__item factoid-item">
-            <div class="factoid-item__icon-wrap">
+            <!--div class="factoid-item__icon-wrap">
               <img class="factoid-item__icon" src="img/icon-alarm.svg" alt="" width="32" height="33">
-            </div>
-            <p class="factoid-item__text">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!</p>
+            </!--div-->
+            <p class="factoid-item__text factoid-item__text--4">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!</p>
           </li>
         </ol>
       </section>
@@ -142,7 +136,7 @@
 
     <footer class="main-footer">
       <div class="container">
-        <a class="main-footer__logo logo" href="#">
+        <a class="main-footer__logo logo" href="#main">
           <img class="logo__text logo__text--footer" src="img/logo-text.svg" alt="Логотип CAT Energy буквенный." width="128" height="24">
         </a>
         <ul class="main-footer__social-list social">

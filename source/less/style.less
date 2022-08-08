@@ -1,6 +1,9 @@
+@import url("fonts.less");
+// Main
+@import url("main.less");
+@import url("page.less");
 // Header
 @import url("header/main-header.less");
-@import url("main__title.less");
 // Index
 @import url("invitation.less");
 @import url("programs-list.less");
@@ -28,38 +31,6 @@
 @import url("map.less");
 @import url("footer/main-footer.less");
 @import url("footer/social.less");
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswaldmedium.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswaldmedium.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswaldregular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswaldregular.woff2") format("woff2");
-  font-display: swap;
-}
 
 @theme-color: #68B738;
 @text-color: #444444;
@@ -95,31 +66,9 @@ button {
   overflow: hidden;
 }
 
-.page {
-  height: 100%;
-  background-color: #ffcaca;
-}
-
-.page__body {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  min-height: 100%;
-  margin: 0 auto;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  background-color: #ffffff;
-  color: @text-color;
-}
-
-.main {
-  flex-grow: 1;
-}
-
 .container {
+  margin-left: auto;
+  margin-right: auto;
   width: 280px;
-  margin: 0 auto;
-  outline: 1px solid rgb(175 79 255);
+  outline: 1px solid #af4fff;
 }
