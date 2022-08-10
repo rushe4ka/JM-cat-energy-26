@@ -1,1 +1,90 @@
-// Начните писать стили здесь
+@import url("fonts.less");
+// Main
+@import url("main.less");
+@import url("page.less");
+// Header
+@import url("header/main-header.less");
+// Index
+@import url("invitation.less");
+@import url("programs-list.less");
+@import url("program-preview.less");
+@import url("factoid.less");
+@import url("factoid-list.less");
+@import url("factoid-item.less");
+@import url("example.less");
+@import url("example-stats.less");
+@import url("example-slider.less");
+@import url("slider-toggle.less");
+// Catalog
+@import url("catalog-products.less");
+@import url("product-card.less");
+@import url("more.less");
+@import url("catalog-additional.less");
+@import url("additional-card.less");
+@import url("benefits.less");
+// Form
+@import url("form.less");
+@import url("form-block.less");
+// Footer
+@import url("contacts.less");
+@import url("address.less");
+@import url("map.less");
+@import url("footer/main-footer.less");
+@import url("footer/social.less");
+
+@theme-color: #68B738;
+@background-color: #f2f2f2;
+@text-color: #444444;
+@theme-text-color: #ffffff;
+
+@theme-font: "Oswald", "Arial", sans-serif;
+@main-font: "Arial", sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  outline: 1px solid #af4fff;
+}
+
+.btn {
+  display: flex;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  align-items: center;
+  justify-content: center;
+  font-family: @theme-font;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  background-color: @theme-color;
+}

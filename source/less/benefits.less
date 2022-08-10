@@ -1,0 +1,45 @@
+.benefits {
+  position: relative;
+  width: 280px;
+  height: 290px;
+  margin-top: 35px;
+
+  &::before {
+    position: absolute;
+    margin: auto;
+    content: "";
+    width: 280px;
+    height: 290px;
+    background-image:
+      linear-gradient(
+        rgba(105, 183, 56, 0.85),
+        rgba(105, 183, 56, 0.85)
+      );
+  }
+
+  &::after {
+    position: absolute;
+    margin: auto;
+    margin-bottom: 60px;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    background-image: url("../img/icon-gift.svg");
+    width: 78px;
+    height: 80px;
+  }
+}
+
+.benefits__text {
+  margin: 0;
+  width: 161px;
+  position: absolute;
+  bottom: 43px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
