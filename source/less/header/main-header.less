@@ -20,6 +20,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-bottom: 0;
+  }
+
   .main-nav__toggle {
     display: none;
   }
@@ -57,4 +63,9 @@
     height: 2px;
     background-color: @theme-color;
   }
+}
+
+@media (min-width: @desktop-width) {
+  padding-top: 53px;
+  padding-bottom: 29px;
 }
