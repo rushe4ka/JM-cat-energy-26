@@ -41,9 +41,7 @@
 @main-font: "Arial", sans-serif;
 
 @tablet-width: 768px;
-@tablet-padding: 30px;
 @desktop-width: 1440px;
-@desktop-padding: 110px;
 
 *,
 *::before,
@@ -92,4 +90,16 @@ button {
   text-decoration: none;
   border: none;
   background-color: @theme-color;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: calc(@tablet-width - 60px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: calc(@desktop-width - 220px);
+  }
 }
