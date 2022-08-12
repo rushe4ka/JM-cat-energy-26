@@ -4,9 +4,22 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  gap: 20px;
 }
 
 .programs-list__item {
   background-color: @background-color;
+}
+
+@media (min-width: @tablet-width) {
+  .programs-list {
+    gap: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
