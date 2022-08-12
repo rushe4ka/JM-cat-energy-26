@@ -10,6 +10,7 @@
       #ffffff 60% 100%
       ),
     url("../img/index-background-mobile.jpg");
+  outline: 1px solid #ff4f4f;
 }
 
 .invitation__title {
@@ -30,4 +31,66 @@
   font-family: @theme-font;
   line-height: 14px;
   text-align: center;
+}
+
+.invitation__image--tablet {
+  display: none;
+}
+
+.invitation__image--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .invitation {
+    background-image: none;
+    padding-top: 38px;
+    padding-bottom: 0;
+  }
+
+  .invitation .container {
+    position: relative;
+    padding-left: 87px;
+    padding-right: 87px;
+  }
+
+  .invitation__title {
+    margin-bottom: 41px;
+    color: #000000;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .invitation__slogan {
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .invitation__image--mobile {
+    display: none;
+  }
+
+  .invitation__image--tablet {
+    display: block;
+    margin-top: -70px;
+  }
+
+  .invitation__btn {
+    width: 244px;
+    position: absolute;
+    top: 224px;
+    left: 87px;
+    z-index: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .invitation__image--desktop {
+    display: block;
+  }
 }
