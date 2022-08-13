@@ -85,22 +85,31 @@
       <section class="example">
         <div class="container">
           <h2 class="example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
-          <dl class="example__stats example-stats">
-            <div class="example-stats__item">
-              <dt class="example-stats__count">5&nbsp;кг</dt>
-              <dd class="example-stats__desc">Снижение веса</dd>
-            </div>
-            <div class="example-stats__item">
-              <dt class="example-stats__count">60&nbsp;дней</dt>
-              <dd class="example-stats__desc">Затрачено времени</dd>
-            </div>
-          </dl>
-          <span class="example__sum">Затраты на&nbsp;питание: 15&nbsp;000&nbsp;руб.</span>
+          <p class="example__text">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и по&#8209;прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
+          <div class="example__stats">
+            <dl class="example-stats">
+              <div class="example-stats__item">
+                <dt class="example-stats__count">5&nbsp;кг</dt>
+                <dd class="example-stats__desc example-stats__desc--weight">Снижение веса</dd>
+              </div>
+              <div class="example-stats__item">
+                <dt class="example-stats__count">60&nbsp;дней</dt>
+                <dd class="example-stats__desc example-stats__desc--time">Затрачено времени</dd>
+              </div>
+            </dl>
+            <p class="example__sum">
+              <span class="example__sum-attribute">Затраты на&nbsp;питание:</span>
+              <span class="example__sum-value">15&nbsp;000&nbsp;руб.</span>
+            </p>
+          </div>
 
           <div class="example__slider example-slider">
-            <img class="example-slider__image" src="img/before-mobile.png" alt="Толстый кот." width="280" height="277">
-            <img class="example-slider__image visually-hidden" src="img/after-mobile.png" alt="Очень худой кот." width="243" height="232">
+            <img class="example-slider__image example-slider__image--before-mobile" src="img/before-mobile.png" alt="Толстый кот." width="280" height="256">
+            <img class="example-slider__image example-slider__image--before-tablet" src="img/before@1x-tablet.png" alt="Толстый кот." width="560" height="512">
+            <img class="example-slider__image example-slider__image--before-desktop" src="img/before@2x-tablet.png" alt="Толстый кот." width="560" height="512">
+            <img class="example-slider__image example-slider__image--after-mobile visually-hidden" src="img/after-mobile.png" alt="Очень худой кот." width="280" height="256">
+            <img class="example-slider__image example-slider__image--after-tablet visually-hidden" src="img/after@1x-tablet.png" alt="Очень худой кот." width="280" height="256">
+            <img class="example-slider__image example-slider__image--after-desktop visually-hidden" src="img/after@2x-tablet.png" alt="Очень худой кот." width="280" height="256">
             <div class="slider-toggle">
               <button class="slider-toggle__label">Было</button>
               <span class="slider-toggle__checkbox"></span>

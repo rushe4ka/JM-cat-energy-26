@@ -31,7 +31,7 @@
 
 .example-stats__desc {
   position: absolute;
-  margin: 0;
+  margin: 0 auto;
   bottom: -17px;
   width: 87px;
   padding-left: 14px;
@@ -44,4 +44,41 @@
   line-height: 100%;
   text-align: center;
   text-transform: lowercase;
+}
+
+@media (min-width: @tablet-width) {
+  .example__stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example-stats {
+    width: 370px;
+  }
+
+  .example-stats__item {
+    width: 162px;
+  }
+
+  .example-stats__count {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example-stats__desc {
+    bottom: -5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .example-stats__desc--weight {
+    width: 114px;
+  }
+
+  .example-stats__desc--time {
+    width: 143px;
+  }
 }
