@@ -80,11 +80,25 @@
       @background-color 25%);
   }
 
+  .example .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 224px;
+  }
+
   .example__title {
     margin-bottom: 146px;
   }
 
   .example__text {
+    width: 460px;
     margin-bottom: 69px;
+  }
+
+  .example__sum {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 63px;
+    width: 460px;
   }
 }
