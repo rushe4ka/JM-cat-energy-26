@@ -1,11 +1,11 @@
 .address {
-  padding-top: 26px;
-  padding-bottom: 26px;
-  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 5px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  font-style: normal;
 }
 
 .address__intro {
@@ -23,4 +23,43 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .address {
+    padding: 60px 40px 56px 40px;
+  }
+
+  .address__intro {
+    width: 180px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .address__info {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    width: 160px;
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 2;
+    width: 565px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+  }
+
+  .address__info {
+    text-align: left;
+  }
 }
