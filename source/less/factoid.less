@@ -5,11 +5,31 @@
 
 .factoid__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-family: @theme-font;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .factoid {
+    padding-top: 45px;
+    padding-bottom: 49px;
+  }
+
+  .factoid__title {
+    margin-bottom: 72px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .factoid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }

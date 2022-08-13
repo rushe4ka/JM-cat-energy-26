@@ -2,9 +2,41 @@
   margin: 0;
   list-style-type: none;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .factoid-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 153px;
+    row-gap: 27px;
+    counter-reset: list 0;
+  }
+
+  .factoid-list__item {
+    position: relative;
+  }
+
+  .factoid-list__item::after {
+    position: absolute;
+    counter-increment: list;
+    content: counter(list) "";
+    right: 0;
+    top: 0;
+    font-family: @theme-font;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: @background-color;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .factoid-list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 79px;
+    row-gap: 27px;
+  }
 }
