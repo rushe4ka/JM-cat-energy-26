@@ -66,6 +66,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  padding-top: 53px;
-  padding-bottom: 29px;
+  .main-header {
+    padding-top: 53px;
+    padding-bottom: 29px;
+  }
+
+  .nav-list__item a {
+    color: #ffffff;
+  }
+
+  .nav-list__item--current::after {
+    background-color: #ffffff;
+  }
 }
