@@ -11,6 +11,10 @@
   margin-right: auto;
 }
 
+.form__block {
+  margin: 0;
+}
+
 .form__appeal {
   margin: 0;
   margin-bottom: 15px;
@@ -19,7 +23,13 @@
   color: #000000;
 }
 
+.form__main-data-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__submit-inner {
+  margin-top: 10px;
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
@@ -58,6 +68,7 @@
   .form__submit-inner {
     flex-direction: row;
     gap: 60px;
+    margin-top: 30px;
     padding-bottom: 72px;
     align-items: center;
   }
@@ -78,6 +89,12 @@
 
   .main__title--form {
     width: calc(@desktop-width - 220px);
+  }
+
+  .form__main-data-wrap {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
   }
 
   .form__submit-inner {
