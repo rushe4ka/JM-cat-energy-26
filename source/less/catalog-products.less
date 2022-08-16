@@ -10,3 +10,21 @@
   padding-top: 19px;
   padding-bottom: 25px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog-products__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 142px;
+    column-gap: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-products__list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}

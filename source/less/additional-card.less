@@ -24,3 +24,21 @@
 .additional-card__btn {
   width: 100%;
 }
+
+@media (min-width: @tablet-width) {
+  .additional-card {
+    padding: 28px 38px;
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-card {
+    padding: 25px 0 27px 0;
+  }
+}
