@@ -1,7 +1,6 @@
 .benefits {
   position: relative;
   width: 280px;
-  height: 290px;
 
   &::before {
     position: absolute;
@@ -47,7 +46,7 @@
 
 @media (min-width: @tablet-width) {
   .benefits {
-    width: 100%;
+    width: calc(@tablet-width - 60px);
     height: auto;
 
     &::before {
@@ -78,5 +77,40 @@
     bottom: auto;
     transform: translateY(-50%) translateX(0);
     text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits {
+    width: 245px;
+
+    &::before {
+      height: 290px;
+      object-fit: cover;
+    }
+
+    &::after {
+      top: 55px;
+      width: 80px;
+      height: 83px;
+    }
+  }
+
+  .benefits__banner--mobile {
+    display: block;
+    object-fit: cover;
+  }
+
+  .benefits__banner--tablet {
+    display: none;
+  }
+
+  .benefits__text {
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: 42px;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
   }
 }
