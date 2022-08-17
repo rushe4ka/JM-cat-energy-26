@@ -3,6 +3,8 @@
 // Main
 @import url("main.less");
 @import url("page.less");
+@import url("container.less");
+@import url("btn.less");
 // Header
 @import url("header/main-header.less");
 @import url("header/main-nav.less");
@@ -60,46 +62,4 @@ button {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 280px;
-  outline: 1px solid #af4fff;
-}
-
-.btn {
-  display: flex;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  align-items: center;
-  justify-content: center;
-  font-family: @theme-font;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  background-color: @theme-color;
-}
-
-@media (min-width: @tablet-width) {
-  .container {
-    width: calc(@tablet-width - 60px);
-  }
-
-  .btn {
-    padding-top: 14px;
-    padding-bottom: 14px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .container {
-    width: calc(@desktop-width - 220px);
-  }
 }
