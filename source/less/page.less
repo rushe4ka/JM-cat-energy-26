@@ -1,11 +1,11 @@
 .page {
   height: 100%;
+  position: relative;
 }
 
 .page__body {
   display: flex;
   flex-direction: column;
-  width: 320px;
   min-height: 100%;
   margin: 0 auto;
   font-family: "Arial", sans-serif;
@@ -14,17 +14,4 @@
   line-height: 18px;
   color: @text-color;
   outline: 1px solid #059100;
-}
-
-@media (min-width: @tablet-width) {
-  .page__body {
-    width: @tablet-width;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page__body {
-    position: relative;
-    width: @desktop-width;
-  }
 }
