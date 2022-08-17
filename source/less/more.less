@@ -1,7 +1,9 @@
 .more {
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .more__button {
@@ -28,12 +30,56 @@
   margin-bottom: 21px;
 }
 
-.button-show-all {
+.more__button-show-all {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-family: @theme-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @text-color;
+  background-color: @background-color;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
   .more {
-    border: 2px solid @background-color;
+    margin-top: 105px;
+    padding: 36px;
+    padding-top: 52px;
+    border: 2px solid #f2f2f2;
+  }
+
+  .more__button {
+    min-width: 60px;
+    min-height: 60px;
+    margin-bottom: 49px;
+  }
+
+  .more__subject {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 23px;
+    text-align: center;
+  }
+
+  .more__subtitle {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 87px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .more {
+    margin-top: 113px;
   }
 }
