@@ -10,10 +10,11 @@
       #ffffff 60% 100%
       ),
     url("../img/index-background-mobile.jpg");
+  background-position: center top;
   outline: 1px solid #ff4f4f;
 }
 
-.invitation .container {
+.invitation__container {
   position: relative;
 }
 
@@ -56,7 +57,7 @@
     padding-top: 38px;
   }
 
-  .invitation .container {
+  .invitation__container {
     padding-bottom: 526px;
   }
 
@@ -120,7 +121,7 @@
     }
   }
 
-  .invitation .container {
+  .invitation__container {
     position: static;
     padding-bottom: 247px;
   }
@@ -135,7 +136,8 @@
 
   .invitation__image {
     top: 141px;
-    right: 330px;
+    right: 50%;
+    transform: translateX(70%);
   }
 
   .invitation__image--desktop {
