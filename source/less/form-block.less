@@ -1,12 +1,10 @@
 .form-block {
   padding: 24px 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
   border: none;
-  outline: 1px solid #188d01;
-  outline-offset: -1px;
+  background-color: #f5f4b5;
 }
 
 .form-block__legend {
@@ -18,4 +16,60 @@
   font-size: 24px;
   line-height: 26px;
   color: #000000;
+}
+
+.form-block--user-data,
+.form-block--program {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-block--user-data,
+  .form-block--program {
+    &::after {
+      display: none;
+    }
+  }
+
+  .form-block--additional {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & .form-block__inner {
+      width: 295px;
+    }
+
+    & .form-block__inner:not:last-child {
+      width: 295px;
+      margin-right: 40px;
+    }
+  }
+
+  .form-block__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-block--program {
+    padding: 25px;
+    border: 1px solid #e7e7e7;
+  }
+
+  .form-block--additional {
+    & .form-block__inner {
+      width: 290px;
+    }
+  }
 }

@@ -1,3 +1,20 @@
+.form {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid #af4fff;
+}
+
+.main__title--form {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__block {
+  margin: 0;
+}
+
 .form__appeal {
   margin: 0;
   margin-bottom: 15px;
@@ -6,7 +23,13 @@
   color: #000000;
 }
 
+.form__main-data-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__submit-inner {
+  margin-top: 10px;
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
@@ -21,4 +44,65 @@
 .form__note {
   line-height: 16px;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: calc(@tablet-width - 140px);
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid #af4fff;
+  }
+
+  .main__title--form {
+    width: calc(@tablet-width - 140px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form__appeal {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__submit-inner {
+    flex-direction: row;
+    gap: 60px;
+    margin-top: 30px;
+    padding-bottom: 72px;
+    align-items: center;
+  }
+
+  .form__btn {
+    margin: 0;
+    width: 282px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: calc(@desktop-width - 220px);
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid #af4fff;
+  }
+
+  .main__title--form {
+    width: calc(@desktop-width - 220px);
+  }
+
+  .form__main-data-wrap {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
+
+  .form__submit-inner {
+    gap: 80px;
+    padding-bottom: 82px;
+  }
+
+  .form__btn {
+    width: 568px;
+  }
 }

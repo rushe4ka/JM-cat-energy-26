@@ -2,31 +2,32 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: CAT energy</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   </head>
   <body class="page__body">
-    <header class="main-header container">
+    <header class="main-header container" id="main">
       <a class="main-header__logo main-header__logo--cat" href="index.html">
         <img src="img/logo-cat.svg" alt="Логотип CAT Energy схематическое изображение кота." width="33" height="37" role="img">
       </a>
-      <a class="main-header__logo main-header__logo--text" href="">
+      <a class="main-header__logo main-header__logo--text" href="index.html">
         <img src="img/logo-text.svg" alt="Логотип CAT Energy буквенный." width="101" height="18" role="img">
-    </a>
+      </a>
 
       <nav class="main-nav">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list nav-list visually-hidden">
-          <li class="nav-list__item nav-list__item--current">
+        <ul class="main-nav__list nav-list">
+          <li class="nav-list__item nav-list__item--inside">
             <a href="#">Главная</a>
           </li>
-          <li class="nav-list__item">
+          <li class="nav-list__item nav-list__item--inside">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="nav-list__item">
+          <li class="nav-list__item nav-list__item--current nav-list__item--inside">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -34,47 +35,49 @@
     </header>
 
     <main class="main">
-      <h1 class="main__title container">Подбор программы</h1>
+      <h1 class="main__title main__title--form">Подбор программы</h1>
 
-      <form class="form container" action="https://echo.htmlacademy.ru" method="post">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <p class="form__appeal">Заполните анкету, и&nbsp;мы&nbsp;подберем<br>программу питания для вашего кота</p>
 
-        <fieldset class="form__user-data form-block">
-          <legend class="visually-hidden">Информация о коте</legend>
-          <label class="form-block__inner field">
-            <span class="field__label">Имя:*</span>
-            <input class="field__input" type="text" name="name" placeholder="Барсик" required>
-          </label>
-          <label class="form-block__inner field">
-            <span class="field__label">Вес (кг):*</span>
-            <input class="field__input" type="number" name="weight" placeholder="7" required>
-          </label>
-          <label class="form-block__inner field">
-            <span class="field__label">Возраст (лет):</span>
-            <input class="field__input" type="number" name="age" placeholder="7" required>
-          </label>
-        </fieldset>
+        <div class="form__main-data-wrap">
+          <fieldset class="form__block form-block form-block--user-data">
+            <legend class="visually-hidden">Информация о коте</legend>
+            <label class="form-block__inner field">
+              <span class="field__label">Имя:*</span>
+              <input class="field__input" type="text" name="name" placeholder="Барсик" required>
+            </label>
+            <label class="form-block__inner field">
+              <span class="field__label">Вес (кг):*</span>
+              <input class="field__input" type="number" name="weight" placeholder="7" required>
+            </label>
+            <label class="form-block__inner field">
+              <span class="field__label">Возраст (лет):</span>
+              <input class="field__input" type="number" name="age" placeholder="7" required>
+            </label>
+          </fieldset>
 
-        <fieldset class="form__program form-block">
-          <legend class="visually-hidden">Выбор программы питания</legend>
-          <label class="form-block__inner field-control">
-            <input class="field-control__input" type="radio" name="program" value="pro" checked>
-            <span class="field-control__mark field-control__mark--radio"></span>
-            <span class="field-control__label">Похудение</span>
-          </label>
-          <label class="form-block__inner field-control">
-            <input class="field-control__input" type="radio" name="program" value="slim">
-            <span class="field-control__mark field-control__mark--radio"></span>
-            <span class="field-control__label">Набор массы</span>
-          </label>
-          <label class="form-block__inner field-control">
-            <input class="field-control__input" type="radio" name="program" value="help">
-            <span class="field-control__mark field-control__mark--radio"></span>
-            <span class="field-control__label">Не знаю (нужен ваш совет)</span>
-          </label>
-        </fieldset>
+          <fieldset class="form__block form-block form-block--program">
+            <legend class="visually-hidden">Выбор программы питания</legend>
+            <label class="form-block__inner field-control">
+              <input class="field-control__input" type="radio" name="program" value="pro" checked>
+              <span class="field-control__mark field-control__mark--radio"></span>
+              <span class="field-control__label">Похудение</span>
+            </label>
+            <label class="form-block__inner field-control">
+              <input class="field-control__input" type="radio" name="program" value="slim">
+              <span class="field-control__mark field-control__mark--radio"></span>
+              <span class="field-control__label">Набор массы</span>
+            </label>
+            <label class="form-block__inner field-control">
+              <input class="field-control__input" type="radio" name="program" value="help">
+              <span class="field-control__mark field-control__mark--radio"></span>
+              <span class="field-control__label">Не знаю (нужен ваш совет)</span>
+            </label>
+          </fieldset>
+        </div>
 
-        <fieldset class="form__owner-data form-block">
+        <fieldset class="form__block form-block form-block--owner-data">
           <legend class="form-block__legend">Контактные данные (владельца кота)</legend>
           <label class="form-block__inner field">
             <span class="field__label">E-mail:*</span>
@@ -86,12 +89,12 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__comment form-block">
+        <fieldset class="form__block form-block form-block--comment">
           <legend class="form-block__legend">Комментарий</legend>
           <textarea class="comment" name="comment" rows="5">Расскажите обо всех повАдках кота</textarea>
         </fieldset>
 
-        <fieldset class="form__additional form-block">
+        <fieldset class="form__block form-block form-block--additional">
           <legend class="form-block__legend">Дополнительно</legend>
           <label class="form-block__inner field-control">
             <input class="field-control__input" type="checkbox" name="sweetener" checked>
@@ -121,7 +124,7 @@
         </div>
       </form>
 
-      <section class="contacts">
+      <section class="contacts contacts--modified">
         <h2 class="visually-hidden">Контакты для дилеров</h2>
         <div class="contacts__info address container">
           <p class="address__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
@@ -131,7 +134,8 @@
           </address>
         </div>
         <div class="contacts__map map">
-          <img class="map__pin" src="img/map-pin.png" alt="Метка на карте, адрес Санкт-Петербург, Большая Конюшенная, д. 19/8." width="57" height="53">
+          <img class="map__pin map__pin--mobile" src="img/map-pin-mobile.png" alt="Метка на карте, адрес Санкт-Петербург, Большая Конюшенная, д. 19/8." width="57" height="53">
+          <img class="map__pin map__pin--tablet" src="img/map-pin-mobile.png" alt="Метка на карте, адрес Санкт-Петербург, Большая Конюшенная, д. 19/8." width="113" height="106">
         </div>
       </section>
     </main>

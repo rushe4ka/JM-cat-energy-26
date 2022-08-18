@@ -24,3 +24,41 @@
 .additional-card__btn {
   width: 100%;
 }
+
+@media (min-width: @tablet-width) {
+  .additional-card {
+    padding: 28px 38px;
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-card {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .additional-card__title {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .additional-card__info-table {
+    width: 288px;
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+
+  .additional-card__btn {
+    width: 244px;
+    margin-left: auto;
+  }
+}

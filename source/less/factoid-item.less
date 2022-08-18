@@ -1,8 +1,5 @@
 .factoid-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  outline: 1px solid #ff4f4f;
 }
 
 .factoid-item__text {
@@ -20,56 +17,66 @@
     left: 0;
     background-color: @theme-color;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 15px;
+  }
 }
 
 .factoid-item__text--1 {
   &::after {
-    position: absolute;
-    content: "";
     width: 30px;
     height: 32px;
-    top: 0;
-    left: 0;
-    transform: translateX(50%) translateY(50%);
     background: url("../img/icon-leaf.svg") no-repeat;
   }
 }
 
 .factoid-item__text--2 {
   &::after {
-    position: absolute;
-    content: "";
     width: 29px;
     height: 31px;
-    top: 0;
-    left: 0;
-    transform: translateX(50%) translateY(50%);
     background: url("../img/icon-tub.svg") no-repeat;
   }
 }
 
 .factoid-item__text--3 {
   &::after {
-    position: absolute;
-    content: "";
     width: 25px;
     height: 30px;
-    top: 0;
-    left: 0;
-    transform: translateX(65%) translateY(50%);
     background: url("../img/icon-eat.svg") no-repeat;
   }
 }
 
 .factoid-item__text--4 {
   &::after {
-    position: absolute;
-    content: "";
     width: 32px;
     height: 33px;
-    top: 0;
-    left: 0;
-    transform: translateX(45%) translateY(45%);
     background: url("../img/icon-alarm.svg") no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .factoid-item__text {
+    padding-top: 151px;
+    padding-bottom: 57px;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 2;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
+
+    &::after {
+      top: 65px;
+      left: 25px;
+    }
   }
 }

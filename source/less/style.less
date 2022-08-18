@@ -1,9 +1,14 @@
 @import url("fonts.less");
+@import url("variables.less");
 // Main
 @import url("main.less");
 @import url("page.less");
+@import url("container.less");
+@import url("btn.less");
 // Header
 @import url("header/main-header.less");
+@import url("header/main-nav.less");
+@import url("header/nav-list.less");
 // Index
 @import url("invitation.less");
 @import url("programs-list.less");
@@ -32,14 +37,6 @@
 @import url("footer/main-footer.less");
 @import url("footer/social.less");
 
-@theme-color: #68B738;
-@background-color: #f2f2f2;
-@text-color: #444444;
-@theme-text-color: #ffffff;
-
-@theme-font: "Oswald", "Arial", sans-serif;
-@main-font: "Arial", sans-serif;
-
 *,
 *::before,
 *::after {
@@ -65,26 +62,4 @@ button {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 280px;
-  outline: 1px solid #af4fff;
-}
-
-.btn {
-  display: flex;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  align-items: center;
-  justify-content: center;
-  font-family: @theme-font;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  background-color: @theme-color;
 }
