@@ -1,0 +1,37 @@
+.field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: @theme-font;
+}
+
+.field__input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #e7e7e7;
+  background-color: transparent;
+  vertical-align: baseline;
+
+  &::placeholder {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: @theme-font;
+    transform: translateY(10%);
+    color: #444444;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
