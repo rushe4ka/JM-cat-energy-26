@@ -1,10 +1,39 @@
 .field {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
   text-transform: uppercase;
   font-size: 16px;
   font-family: @theme-font;
+}
+
+.field--email::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 19px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/icon-email.svg");
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.field--tel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 19px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icon-phone.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .field__input {
@@ -33,5 +62,10 @@
       font-size: 20px;
       line-height: 30px;
     }
+  }
+
+  .field--email::after,
+  .field--tel::after {
+    right: 22px;
   }
 }
