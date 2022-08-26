@@ -28,4 +28,12 @@
   .nav-list__item--inside a {
     color: #000000;
   }
+
+  .nav-list__item--current::after {
+    background-color: #ffffff;
+  }
+
+  .nav-list__item--inside.nav-list__item--current::after {
+    background-color: @theme-color;
+  }
 }
