@@ -1,33 +1,77 @@
-.main-nav__toggle {
-  display: block;
+.main-nav {
+  position: absolute;
+  background-color: #ffffff;
+  width: 280px;
+  top: 47px;
+  right: 0;
+  z-index: 1;
 }
 
-.main-nav__list {
-  display: none;
+// Подложка кнопки открытия/закрытия мобильного меню
+.main-nav__toggle {
+  position: absolute;
+  padding: 0;
+  top: -27px;
+  right: 0;
+  display: block;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+// Бургер иконка для открытия мобильного меню
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+// Крестик иконка для закрытия мобильного меню
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__list {
-    display: flex;
-    gap: 33px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-family: @theme-font;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
-}
-
-@media (min-width: @desktop-width) {
   .main-nav {
     margin-left: auto;
+    align-items: center;
+    width: auto;
+    position: static;
+    background-color: transparent;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }
