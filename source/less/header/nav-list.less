@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+
   list-style-type: none;
   font-family: @theme-font;
   font-style: normal;
@@ -45,24 +46,24 @@
     padding: 0;
     border: none;
     text-align: inherit;
-  }
 
-  .nav-list__item:last-child {
-    border: none;
+    &:last-child {
+      border: none;
+    }
   }
 
   .nav-list__item--current {
     position: relative;
-  }
 
-  .nav-list__item--current::after {
-    content: "";
-    position: absolute;
-    bottom: -9px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: @theme-color;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -9px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: @theme-color;
+    }
   }
 }
 

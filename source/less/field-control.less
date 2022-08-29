@@ -18,15 +18,15 @@
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
-}
 
-.field-control__mark--radio {
-  border-radius: 50%;
+  &--radio {
+    border-radius: 50%;
+  }
 }
 
 .field-control__input[type="radio"]:checked + .field-control__mark::before {
-  content: "";
   position: absolute;
+  content: "";
   top: 0;
   left: 0;
   right: 0;
@@ -34,13 +34,14 @@
   margin: auto;
   width: 13px;
   height: 13px;
+
   background-color: @theme-color;
   border-radius: 50%;
 }
 
 .field-control__input[type="checkbox"]:checked + .field-control__mark::before {
-  content: "";
   position: absolute;
+  content: "";
   top: 0;
   left: 0;
   right: 0;
@@ -48,6 +49,7 @@
   margin: auto;
   width: 18px;
   height: 14px;
+
   background-image: url("../img/icon-checked.svg");
   background-size: 18px 14px;
   background-repeat: no-repeat;
