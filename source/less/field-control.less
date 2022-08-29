@@ -11,6 +11,10 @@
   display: none;
 }
 
+.field-control__input:disabled + .field-control__mark + .field-control__label {
+  opacity: 0.3;
+}
+
 .field-control__mark {
   position: absolute;
   top: 0;
@@ -21,6 +25,10 @@
 
   &--radio {
     border-radius: 50%;
+  }
+
+  &:hover {
+    border: 1px solid #bababa;
   }
 }
 
