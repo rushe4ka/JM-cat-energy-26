@@ -17,19 +17,19 @@
 
   .factoid-list__item {
     position: relative;
-  }
 
-  .factoid-list__item::after {
-    position: absolute;
-    counter-increment: list;
-    content: counter(list) "";
-    right: 0;
-    top: 0;
-    font-family: @theme-font;
-    font-weight: 400;
-    font-size: 280px;
-    line-height: 280px;
-    color: @background-color;
+    ::after {
+      position: absolute;
+      counter-increment: list;
+      content: counter(list) "";
+      right: 0;
+      top: 0;
+      font-family: @theme-font;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: @background-color;
+    }
   }
 }
 

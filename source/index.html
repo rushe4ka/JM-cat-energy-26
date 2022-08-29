@@ -9,15 +9,17 @@
   </head>
   <body class="page__body">
     <header class="main-header container" id="main">
-      <a class="main-header__logo main-header__logo--cat" href="#">
-        <img src="img/logo-cat.svg" alt="Логотип CAT Energy схематическое изображение кота." width="33" height="37" role="img">
-      </a>
-      <a class="main-header__logo main-header__logo--text" href="#">
-        <img src="img/logo-text.svg" alt="Логотип CAT Energy буквенный." width="101" height="18" role="img">
-      </a>
+      <div class="main-header__logo-wrap">
+        <a class="main-header__logo main-header__logo--cat" href="#">
+          <img src="img/logo-cat.svg" alt="Логотип CAT Energy схематическое изображение кота." width="33" height="37">
+        </a>
+        <a class="main-header__logo main-header__logo--text" href="#">
+          <img src="img/logo-text.svg" alt="Логотип CAT Energy буквенный." width="101" height="18">
+        </a>
+      </div>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle">
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list nav-list">
@@ -109,16 +111,21 @@
 
           <div class="example__slider example-slider">
             <img class="example-slider__image example-slider__image--before-mobile" src="img/before-mobile.png" alt="Толстый кот." width="280" height="256">
+            <div class="example-slider__image example-slider__image--after-mobile">
+              <img class="visually-hidden" src="img/after-mobile.png" alt="Очень худой кот." width="280" height="256"></div>
+
             <img class="example-slider__image example-slider__image--before-tablet" src="img/before@1x-tablet.png" alt="Толстый кот." width="560" height="512">
+            <div class="example-slider__image example-slider__image--after-tablet">
+              <img class="visually-hidden" src="img/after@1x-tablet.png" alt="Очень худой кот." width="280" height="256"></div>
+
             <img class="example-slider__image example-slider__image--before-desktop" src="img/before@2x-tablet.png" alt="Толстый кот." width="560" height="512">
-            <img class="example-slider__image example-slider__image--after-mobile visually-hidden" src="img/after-mobile.png" alt="Очень худой кот." width="280" height="256">
-            <img class="example-slider__image example-slider__image--after-tablet visually-hidden" src="img/after@1x-tablet.png" alt="Очень худой кот." width="280" height="256">
-            <img class="example-slider__image example-slider__image--after-desktop visually-hidden" src="img/after@2x-tablet.png" alt="Очень худой кот." width="280" height="256">
-            <div class="slider-toggle">
+            <div class="example-slider__image example-slider__image--after-desktop">
+              <img class="visually-hidden" src="img/after@2x-tablet.png" alt="Очень худой кот." width="280" height="256"></div>
+            <!-- <div class="slider-toggle">
               <button class="slider-toggle__label">Было</button>
               <span class="slider-toggle__checkbox"></span>
               <button class="slider-toggle__label">Стало</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -135,6 +142,13 @@
           </div>
         </div>
         <div class="contacts__map map">
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5652.903034677043!2d30.321412087083758!3d59.93872897006426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2srs!4v1661687759842!5m2!1sru!2srs"
+          width: 320px;
+          height: 362px;
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Офис компании по адресу Большая Конюшенная, д.19/8 Санкт-Петербург"></iframe> -->
           <img class="map__pin map__pin--mobile" src="img/map-pin-mobile.png" alt="Метка на карте, адрес Санкт-Петербург, Большая Конюшенная, д. 19/8." width="57" height="53">
           <img class="map__pin map__pin--tablet" src="img/map-pin-mobile.png" alt="Метка на карте, адрес Санкт-Петербург, Большая Конюшенная, д. 19/8." width="113" height="106">
         </div>
@@ -172,11 +186,12 @@
             </a>
           </li>
         </ul>
-        <div class="main-footer__developer">
-          <div class="developer-text">HTML academy</div>
-          <svg class="developer-logo" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="27" height="34"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#666"/></svg>
+        <div class="main-footer__developer developer">
+          <div class="developer__text">HTML academy</div>
+          <svg class="developer__logo" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="27" height="34"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#666"/></svg>
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

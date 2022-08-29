@@ -1,0 +1,79 @@
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: @theme-font;
+}
+
+.field--email::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 19px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/icon-email.svg");
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.field--tel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 19px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icon-phone.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.field__input {
+  width: 100%;
+  min-height: 45px;
+  padding: 13px 16px;
+  padding-right: 42px;
+  border: 1px solid #e7e7e7;
+  background-color: transparent;
+  vertical-align: baseline;
+
+  &::placeholder {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: @theme-font;
+    transform: translateY(10%);
+    color: #444444;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .field--email::after,
+  .field--tel::after {
+    right: 22px;
+  }
+
+  .field__input {
+    min-height: 52px;
+    padding: 10px 19px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}

@@ -3,6 +3,7 @@
   flex-direction: column;
   padding-top: 27px;
   padding-bottom: 20px;
+
   background-image:
     linear-gradient(
       rgba(105, 183, 56, 0.85) 60%,
@@ -21,6 +22,7 @@
 .invitation__title {
   margin: 0;
   margin-bottom: 25px;
+
   color: @theme-text-color;
   font-family: @theme-font;
   font-weight: 400;
@@ -32,6 +34,7 @@
 .invitation__slogan {
   margin: 0;
   margin-bottom: 300px;
+
   color: @theme-text-color;
   font-family: @theme-font;
   line-height: 14px;
@@ -41,14 +44,14 @@
 .invitation__image {
   position: absolute;
   bottom: 40px;
-}
 
-.invitation__image--tablet {
-  display: none;
-}
+  &--tablet {
+    display: none;
+  }
 
-.invitation__image--desktop {
-  display: none;
+  &--desktop {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -87,26 +90,28 @@
 
   .invitation__btn {
     width: 244px;
+    padding-top: 17px;
+    padding-bottom: 17px;
   }
 
   .invitation__image {
     bottom: 0;
-  }
 
-  .invitation__image--mobile {
-    display: none;
-  }
+    &--mobile {
+      display: none;
+    }
 
-  .invitation__image--tablet {
-    display: block;
+    &--tablet {
+      display: block;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .invitation {
     &::before {
-      content: "";
       position: absolute;
+      content: "";
       width: 720px;
       height: 694px;
       top: -37px;
@@ -138,13 +143,13 @@
     top: 141px;
     right: 50%;
     transform: translateX(70%);
-  }
 
-  .invitation__image--desktop {
-    display: block;
-  }
+    &--desktop {
+      display: block;
+    }
 
-  .invitation__image--tablet {
-    display: none;
+    &--tablet {
+      display: none;
+    }
   }
 }

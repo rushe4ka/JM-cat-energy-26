@@ -5,70 +5,76 @@
   justify-content: center;
 }
 
-.example-slider__image--before-tablet {
-  display: none;
-}
+.example-slider__image {
+  &--before-tablet {
+    display: none;
+  }
 
-.example-slider__image--before-desktop {
-  display: none;
-}
+  &--after-tablet {
+    display: none;
+  }
 
-.example-slider__image--after-tablet {
-  display: none;
-}
+  &--before-desktop {
+    display: none;
+  }
 
-.example-slider__image--after-desktop {
-  display: none;
+  &--after-desktop {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .example-slider__image--before-tablet {
-    display: block;
-  }
+  .example-slider__image {
+    &--before-tablet {
+      display: block;
+    }
 
-  .example-slider__image--after-tablet {
-    display: block;
-  }
+    &--after-tablet {
+      display: block;
+    }
 
-  .example-slider__image--before-mobile {
-    display: none;
-  }
+    &--before-mobile {
+      display: none;
+    }
 
-  .example-slider__image--before-desktop {
-    display: none;
-  }
+    &--after-mobile {
+      display: none;
+    }
 
-  .example-slider__image--after-mobile {
-    display: none;
-  }
+    &--before-desktop {
+      display: none;
+    }
 
-  .example-slider__image--after-desktop {
-    display: none;
+    &--after-desktop {
+      display: none;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .example-slider__image--before-desktop {
-    display: block;
-  }
+  .example-slider__image {
+    &--before-desktop {
+      display: block;
+    }
 
-  .example-slider__image--after-desktop {
-    display: block;
-  }
+    &--after-desktop {
+      display: block;
+    }
 
-  .example-slider__image--before-mobile {
-    display: none;
-  }
+    &--before-mobile {
+      display: none;
+    }
 
-  .example-slider__image--before-tablet {
-    display: none;
-  }
+    &--after-mobile {
+      display: none;
+    }
 
-  .example-slider__image--after-mobile {
-    display: none;
-  }
+    &--before-tablet {
+      display: none;
+    }
 
-  .example-slider__image--after-tablet {
-    display: none;
+    &--after-tablet {
+      display: none;
+    }
   }
 }

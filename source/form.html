@@ -9,25 +9,27 @@
   </head>
   <body class="page__body">
     <header class="main-header container" id="main">
-      <a class="main-header__logo main-header__logo--cat" href="index.html">
-        <img src="img/logo-cat.svg" alt="Логотип CAT Energy схематическое изображение кота." width="33" height="37" role="img">
-      </a>
-      <a class="main-header__logo main-header__logo--text" href="index.html">
-        <img src="img/logo-text.svg" alt="Логотип CAT Energy буквенный." width="101" height="18" role="img">
-      </a>
+      <div class="main-header__logo-wrap">
+        <a class="main-header__logo main-header__logo--cat" href="index.html">
+          <img src="img/logo-cat.svg" alt="Логотип CAT Energy схематическое изображение кота." width="33" height="37">
+        </a>
+        <a class="main-header__logo main-header__logo--text" href="index.html">
+          <img src="img/logo-text.svg" alt="Логотип CAT Energy буквенный." width="101" height="18">
+        </a>
+      </div>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle">
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item nav-list__item--inside">
-            <a href="#">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="nav-list__item nav-list__item--inside">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="nav-list__item nav-list__item--current nav-list__item--inside">
+          <li class="nav-list__item nav-list__item--inside nav-list__item--current">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -38,9 +40,9 @@
       <h1 class="main__title main__title--form">Подбор программы</h1>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="form__appeal">Заполните анкету, и&nbsp;мы&nbsp;подберем<br>программу питания для вашего кота</p>
+        <p class="form__appeal form-container">Заполните анкету, и&nbsp;мы&nbsp;подберем<br>программу питания для вашего кота</p>
 
-        <div class="form__main-data-wrap">
+        <div class="form__main-data-wrap form-container">
           <fieldset class="form__block form-block form-block--user-data">
             <legend class="visually-hidden">Информация о коте</legend>
             <label class="form-block__inner field">
@@ -48,11 +50,11 @@
               <input class="field__input" type="text" name="name" placeholder="Барсик" required>
             </label>
             <label class="form-block__inner field">
-              <span class="field__label">Вес (кг):*</span>
+              <span class="field__label">Вес&nbsp;(кг):*</span>
               <input class="field__input" type="number" name="weight" placeholder="7" required>
             </label>
             <label class="form-block__inner field">
-              <span class="field__label">Возраст (лет):</span>
+              <span class="field__label">Возраст&nbsp;(лет):</span>
               <input class="field__input" type="number" name="age" placeholder="7" required>
             </label>
           </fieldset>
@@ -77,25 +79,40 @@
           </fieldset>
         </div>
 
-        <fieldset class="form__block form-block form-block--owner-data">
-          <legend class="form-block__legend">Контактные данные (владельца кота)</legend>
-          <label class="form-block__inner field">
-            <span class="field__label">E-mail:*</span>
-            <input class="field__input field__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+        <div class="line">
+          <div class="form-container">
+            <h2 class="main__subtitle main__subtitle--owner-data">Контактные данные<br>(владельца кота)</h2>
+          </div>
+        </div>
+
+        <fieldset class="form__block form-block form-block--owner-data form-container">
+          <label class="form-block__inner field field--email">
+            <span class="field__label">E&#8209;mail:*</span>
+            <input class="field__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
           </label>
-          <label class="form-block__inner field">
+          <label class="form-block__inner field field--tel">
             <span class="field__label">Телефон:*</span>
-            <input class="field__input field__input--tel" type="tel" placeholder="8 (960) 900-60-90" name="tel" required>
+            <input class="field__input" type="tel" placeholder="8 (960) 900-60-90" name="tel" required>
           </label>
         </fieldset>
 
-        <fieldset class="form__block form-block form-block--comment">
-          <legend class="form-block__legend">Комментарий</legend>
-          <textarea class="comment" name="comment" rows="5">Расскажите обо всех повАдках кота</textarea>
+        <div class="line">
+          <div class="form-container">
+            <h2 class="main__subtitle main__subtitle--comment">Комментарий</h2>
+          </div>
+        </div>
+
+        <fieldset class="form__block form-block form-block--comment form-container">
+          <textarea class="comment" name="comment" placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
 
-        <fieldset class="form__block form-block form-block--additional">
-          <legend class="form-block__legend">Дополнительно</legend>
+        <div class="line">
+          <div class="form-container">
+            <h2 class="main__subtitle main__subtitle--additional">Дополнительно</h2>
+          </div>
+        </div>
+
+        <fieldset class="form__block form-block form-block--additional form-container">
           <label class="form-block__inner field-control">
             <input class="field-control__input" type="checkbox" name="sweetener" checked>
             <span class="field-control__mark field-control__mark--checkbox"></span>
@@ -118,7 +135,7 @@
           </label>
         </fieldset>
 
-        <div class="form__submit-inner">
+        <div class="form__submit-inner form-container">
           <button class="form__btn btn" type="submit">Отправить заявку</button>
           <span class="form__note">* — Обязательные поля</span>
         </div>
@@ -171,11 +188,12 @@
             </a>
           </li>
         </ul>
-        <div class="main-footer__developer">
-          <div class="developer-text">HTML academy</div>
-          <svg class="developer-logo" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="27" height="34"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#666"/></svg>
+        <div class="main-footer__developer developer">
+          <div class="developer__text">HTML academy</div>
+          <svg class="developer__logo" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="27" height="34"><path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill="#666"/></svg>
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

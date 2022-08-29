@@ -4,8 +4,8 @@
 
   &::before {
     position: absolute;
-    margin: auto;
     content: "";
+    margin: auto;
     width: 280px;
     height: 290px;
     background-image:
@@ -17,23 +17,24 @@
 
   &::after {
     position: absolute;
+    content: "";
     top: 65px;
     left: 50%;
     transform: translateX(-50%);
-    content: "";
-    background-image: url("../img/icon-gift.svg");
     width: 78px;
     height: 80px;
+    background-image: url("../img/icon-gift.svg");
   }
 }
 
 .benefits__text {
+  position: absolute;
   margin: 0;
   width: 161px;
-  position: absolute;
   bottom: 43px;
   left: 50%;
   transform: translateX(-50%);
+
   font-size: 16px;
   line-height: 20px;
   text-align: center;
