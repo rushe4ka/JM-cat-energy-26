@@ -1,6 +1,11 @@
 .additional-card {
   padding-top: 13px;
   padding-bottom: 19px;
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .additional-card__title {
@@ -30,10 +35,6 @@
     padding: 28px 37px;
     border: 1px solid #cdcdcd;
     border-bottom: none;
-
-    &:last-child {
-      border-bottom: 1px solid #cdcdcd;
-    }
   }
 }
 
@@ -42,8 +43,8 @@
     display: flex;
     align-items: center;
     padding: 15px 0 15px 0;
-    border-left: 0;
-    border-right: 0;
+    border-left: none;
+    border-right: none;
   }
 
   .additional-card__title {
