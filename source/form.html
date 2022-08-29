@@ -40,9 +40,9 @@
       <h1 class="main__title main__title--form">Подбор программы</h1>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="form__appeal">Заполните анкету, и&nbsp;мы&nbsp;подберем<br>программу питания для вашего кота</p>
+        <p class="form__appeal form-container">Заполните анкету, и&nbsp;мы&nbsp;подберем<br>программу питания для вашего кота</p>
 
-        <div class="form__main-data-wrap">
+        <div class="form__main-data-wrap form-container">
           <fieldset class="form__block form-block form-block--user-data">
             <legend class="visually-hidden">Информация о коте</legend>
             <label class="form-block__inner field">
@@ -79,8 +79,13 @@
           </fieldset>
         </div>
 
-        <fieldset class="form__block form-block form-block--owner-data">
-          <legend class="form-block__legend form-block__legend--owner-data">Контактные данные (владельца кота)</legend>
+        <div class="line">
+          <div class="form-container">
+            <h2 class="main__subtitle main__subtitle--owner-data">Контактные данные<br>(владельца кота)</h2>
+          </div>
+        </div>
+
+        <fieldset class="form__block form-block form-block--owner-data form-container">
           <label class="form-block__inner field field--email">
             <span class="field__label">E&#8209;mail:*</span>
             <input class="field__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -91,13 +96,23 @@
           </label>
         </fieldset>
 
-        <fieldset class="form__block form-block form-block--comment">
-          <legend class="form-block__legend form-block__legend--comment">Комментарий</legend>
+        <div class="line">
+          <div class="form-container">
+            <h2 class="main__subtitle main__subtitle--comment">Комментарий</h2>
+          </div>
+        </div>
+
+        <fieldset class="form__block form-block form-block--comment form-container">
           <textarea class="comment" name="comment" placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
 
-        <fieldset class="form__block form-block form-block--additional">
-          <legend class="form-block__legend form-block__legend--additional">Дополнительно</legend>
+        <div class="line">
+          <div class="form-container">
+            <h2 class="main__subtitle main__subtitle--additional">Дополнительно</h2>
+          </div>
+        </div>
+
+        <fieldset class="form__block form-block form-block--additional form-container">
           <label class="form-block__inner field-control">
             <input class="field-control__input" type="checkbox" name="sweetener" checked>
             <span class="field-control__mark field-control__mark--checkbox"></span>
@@ -120,7 +135,7 @@
           </label>
         </fieldset>
 
-        <div class="form__submit-inner">
+        <div class="form__submit-inner form-container">
           <button class="form__btn btn" type="submit">Отправить заявку</button>
           <span class="form__note">* — Обязательные поля</span>
         </div>

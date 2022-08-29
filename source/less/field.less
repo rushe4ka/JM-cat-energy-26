@@ -38,6 +38,7 @@
 
 .field__input {
   width: 100%;
+  min-height: 45px;
   padding: 13px 16px;
   padding-right: 42px;
   border: 1px solid #e7e7e7;
@@ -58,15 +59,20 @@
   .field {
     font-size: 20px;
     line-height: 30px;
-
-    &::placeholder {
-      font-size: 20px;
-      line-height: 30px;
-    }
   }
 
   .field--email::after,
   .field--tel::after {
     right: 22px;
+  }
+
+  .field__input {
+    min-height: 52px;
+    padding: 10px 19px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
