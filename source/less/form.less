@@ -1,5 +1,8 @@
 .form__appeal {
-  margin-bottom: 15px;
+  display: block;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: @theme-font;
   text-transform: uppercase;
   color: #000000;
@@ -30,6 +33,7 @@
 
 @media (min-width: @tablet-width) {
   .form__appeal {
+    padding-top: 27px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -51,6 +55,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form__appeal {
+    padding-bottom: 42px;
+    font-size: 27px;
+    line-height: 30px;
+  }
+
   .form__main-data-wrap {
     display: grid;
     grid-template-columns: 570px 570px;
