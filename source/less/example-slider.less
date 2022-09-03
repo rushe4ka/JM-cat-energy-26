@@ -1,80 +1,77 @@
 .example-slider {
+  position: relative;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  width: 280px;
+  height: 256px;
 }
 
-.example-slider__image {
-  &--before-tablet {
-    display: none;
+.example-slider__toggle {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/slider-toggle_default.svg");
+  z-index: 2;
+
+  &:hover {
+    background-image: url("../img/slider-toggle_hover.svg");
   }
 
-  &--after-tablet {
-    display: none;
+  &:active {
+    background-image: url("../img/slider-toggle_active.svg");
+    opacity: 0.6;
   }
 
-  &--before-desktop {
-    display: none;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -109px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 256px;
+    background-color: #666666;
   }
 
-  &--after-desktop {
-    display: none;
+  &:hover::after {
+    background-color: #68b738;
   }
+
+  &:active::after {
+    background-color: #5eaa2f;
+    opacity: 0.6;
+  }
+}
+
+.example-slider__image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.example-slider__image--before img {
+  object-position: left;
+}
+
+.example-slider__image--after img {
+  object-position: right;
 }
 
 @media (min-width: @tablet-width) {
-  .example-slider__image {
-    &--before-tablet {
-      display: block;
-    }
+  .example-slider {
+    width: 560px;
+    height: 512px;
+  }
 
-    &--after-tablet {
-      display: block;
-    }
-
-    &--before-mobile {
-      display: none;
-    }
-
-    &--after-mobile {
-      display: none;
-    }
-
-    &--before-desktop {
-      display: none;
-    }
-
-    &--after-desktop {
-      display: none;
+  .example-slider__toggle {
+    &::after {
+      top: -238px;
+      height: 512px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .example-slider__image {
-    &--before-desktop {
-      display: block;
-    }
-
-    &--after-desktop {
-      display: block;
-    }
-
-    &--before-mobile {
-      display: none;
-    }
-
-    &--after-mobile {
-      display: none;
-    }
-
-    &--before-tablet {
-      display: none;
-    }
-
-    &--after-tablet {
-      display: none;
-    }
-  }
 }

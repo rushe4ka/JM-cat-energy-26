@@ -114,22 +114,28 @@
           </div>
 
           <div class="example__slider example-slider">
-            <img class="example-slider__image example-slider__image--before-mobile" src="img/before-mobile.png" alt="Толстый кот." width="280" height="256">
-            <div class="example-slider__image example-slider__image--after-mobile">
-              <img class="visually-hidden" src="img/after-mobile.png" alt="Очень худой кот." width="280" height="256"></div>
+            <div class="example-slider__toggle">
+              <button class="example-slider__button visually-hidden" type="button"></button>
+            </div>
 
-            <img class="example-slider__image example-slider__image--before-tablet" src="img/before@1x-tablet.png" alt="Толстый кот." width="560" height="512">
-            <div class="example-slider__image example-slider__image--after-tablet">
-              <img class="visually-hidden" src="img/after@1x-tablet.png" alt="Очень худой кот." width="280" height="256"></div>
+            <div  class="example-slider__image example-slider__image--before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
+                <img src="img/before-mobile.png" alt="Толстый кот." width="280" height="256" srcset="img/before-mobile@2x.png 2x">
+              </picture>
+            </div>
+            <div class="example-slider__image example-slider__image--after">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
+                <img src="img/after-mobile.png" alt="Очень худой кот." width="280" height="256" srcset="img/after-mobile@2x.png 2x">
+              </picture>
+            </div>
 
-            <img class="example-slider__image example-slider__image--before-desktop" src="img/before@2x-tablet.png" alt="Толстый кот." width="560" height="512">
-            <div class="example-slider__image example-slider__image--after-desktop">
-              <img class="visually-hidden" src="img/after@2x-tablet.png" alt="Очень худой кот." width="280" height="256"></div>
-            <!-- <div class="slider-toggle">
-              <button class="slider-toggle__label">Было</button>
-              <span class="slider-toggle__checkbox"></span>
-              <button class="slider-toggle__label">Стало</button>
-            </div> -->
+              <!-- <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+            <img class="invitation__image" src="img/index-can-mobile.png" width="280" height="270" alt="Упаковка корма для кошек." srcset="img/index-can-mobile@2x.png 2x">
+          </picture> -->
           </div>
         </div>
       </section>
