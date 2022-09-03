@@ -12,14 +12,13 @@
   </head>
   <body class="page__body">
     <header class="main-header container" id="main">
-      <div class="main-header__logo-wrap">
-        <a class="main-header__logo main-header__logo--cat" href="#">
-          <img src="img/logo-cat.svg" alt="Логотип CAT Energy схематическое изображение кота." width="33" height="37">
-        </a>
-        <a class="main-header__logo main-header__logo--text" href="#">
-          <img src="img/logo-text.svg" alt="Логотип CAT Energy буквенный." width="101" height="18">
-        </a>
-      </div>
+      <a class="main-header__logo" href="#">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-header.svg" width="191" height="37" alt="Барбершоп «Бородинский».">
+        </picture>
+      </a>
 
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">
@@ -49,9 +48,11 @@
             <p class="invitation__slogan">Занялся собой? Займись котом!</p>
             <a class="invitation__btn btn" href="form.html">Подобрать программу</a>
           </div>
-          <img class="invitation__image invitation__image--mobile" src="img/index-can-mobile.png" alt="Упаковка корма для кошек." width="280" height="270">
-          <img class="invitation__image invitation__image--tablet" src="img/index-can-tablet.png" alt="Упаковка корма для кошек." width="709" height="609">
-          <img class="invitation__image invitation__image--desktop" src="img/index-can-desktop.png" alt="Упаковка корма для кошек." width="552" height="499">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+            <img class="invitation__image" src="img/index-can-mobile.png" width="280" height="270" alt="Упаковка корма для кошек." srcset="img/index-can-mobile@2x.png 2x">
+          </picture>
         </div>
       </section>
 
