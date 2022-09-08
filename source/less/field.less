@@ -78,13 +78,9 @@
 
 @media (min-width: @tablet-width) {
   .field {
+    gap: 20px;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .field--email::after,
-  .field--tel::after {
-    right: 22px;
   }
 
   .field__input {
@@ -96,5 +92,14 @@
       font-size: 20px;
       line-height: 30px;
     }
+  }
+
+  .field--tel {
+    gap: 15px;
+  }
+
+  .field--email::after,
+  .field--tel::after {
+    right: 16px;
   }
 }

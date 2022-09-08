@@ -1,5 +1,5 @@
 .additional-card {
-  padding-top: 13px;
+  padding-top: 11px;
   padding-bottom: 19px;
   border-top: 1px solid #cdcdcd;
 
@@ -32,9 +32,26 @@
 
 @media (min-width: @tablet-width) {
   .additional-card {
-    padding: 28px 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 27px 37px;
     border: 1px solid #cdcdcd;
     border-bottom: none;
+  }
+
+  .additional-card__title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .additional-card__info-table {
+    margin-bottom: 19px;
+    padding-top: 5px;
+    gap: 50px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 

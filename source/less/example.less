@@ -6,13 +6,12 @@
 
 .example__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   font-family: @theme-font;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
   color: #000000;
 }
 
@@ -43,8 +42,12 @@
     border-top: 1px solid #e6e6e6;
 
     background-image: linear-gradient(
-      #ffffff 52%,
-      @background-color 52%);
+      #ffffff 57%,
+      @background-color 57%);
+  }
+
+  .example__inner {
+    margin-bottom: 70px;
   }
 
   .example .container {
@@ -66,9 +69,17 @@
     line-height: 24px;
   }
 
+  .example__stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+  }
+
   .example__sum {
     flex-direction: column;
     align-items: flex-end;
+    justify-content: flex-start;
+    padding-top: 10px;
     width: 180px;
     font-size: 20px;
   }
