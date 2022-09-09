@@ -88,26 +88,32 @@
 @media (min-width: @desktop-width) {
   .example {
     padding-top: 20px;
-    padding-bottom: 75px;
+    padding-bottom: 0;
     border-top: none;
 
     background-image: linear-gradient(
-      #ffffff 25%,
-      @background-color 25%);
+      #ffffff 24%,
+      @background-color 24%);
   }
 
   .example .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 224px;
+    column-gap: 200px;
+    align-items: flex-start;
   }
+
+  .example__inner {
+    margin-bottom: 55px;
+  }
+
 
   .example__title {
     margin-bottom: 146px;
   }
 
   .example__text {
-    width: 460px;
+    width: 434px;
     margin-bottom: 69px;
   }
 

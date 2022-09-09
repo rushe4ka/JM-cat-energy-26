@@ -30,6 +30,10 @@
       line-height: 280px;
       color: @background-color;
     }
+
+    &:first-child::after {
+      right: 102px;
+    }
   }
 }
 
@@ -38,5 +42,15 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 79px;
     row-gap: 27px;
+  }
+
+  .factoid-list__item {
+    &::after {
+      right: 0;
+    }
+
+    &:first-child::after {
+      right: 20px;
+    }
   }
 }

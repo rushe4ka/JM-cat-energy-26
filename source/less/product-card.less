@@ -110,6 +110,7 @@
   }
 
   .product-card__inner {
+    margin-top: 3px;
     margin-bottom: 31px;
     flex-grow: 0;
   }
@@ -126,7 +127,19 @@
 }
 
 @media (min-width: @desktop-width) {
+  .product-card {
+    padding: 22px 37px 40px 37px;
+  }
+
   .product-card__image {
-    margin-bottom: 42px;
+    margin-bottom: 39px;
+  }
+
+  .product-card__image img {
+    width: 166px;
+  }
+
+  .product-card__inner {
+    margin-top: 0;
   }
 }

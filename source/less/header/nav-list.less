@@ -72,6 +72,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .nav-list {
+    font-size: 20px;
+    gap: 36px;
+  }
+
   .nav-list__item a {
     color: #ffffff;
   }
@@ -81,6 +86,7 @@
   }
 
   .nav-list__item--current::after {
+    bottom: -12px;
     background-color: #ffffff;
   }
 

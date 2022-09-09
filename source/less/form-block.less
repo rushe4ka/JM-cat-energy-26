@@ -84,11 +84,6 @@
     & .form-block__inner {
       width: 285px;
     }
-
-    & .form-block__inner:not:last-child {
-      width: 295px;
-      margin-right: 40px;
-    }
   }
 }
 
@@ -101,11 +96,23 @@
     display: grid;
     grid-template-columns: 570px 570px;
     gap: 80px;
+    padding-bottom: 20px;
   }
 
   .form-block--additional {
+    justify-content: flex-start;
+
     & .form-block__inner {
-      width: 290px;
+      width: 240px;
+      margin-right: 25px;
     }
+
+    & .form-block__inner:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .form-block--comment {
+    padding-bottom: 20px;
   }
 }
