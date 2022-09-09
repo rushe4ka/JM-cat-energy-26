@@ -76,6 +76,16 @@
   }
 }
 
+.field__input[type="number"]::-webkit-outer-spin-button,
+.field__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 @media (min-width: @tablet-width) {
   .field {
     gap: 20px;
