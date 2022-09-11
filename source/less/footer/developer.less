@@ -17,10 +17,17 @@
   }
 }
 
-.developer__link {
-  &:active {
-    opacity: 0.3;
-  }
+.developer__logo {
+  fill: #666666;
+}
+
+.developer__link:hover .developer__logo {
+  fill: @theme-color;
+}
+
+.developer__link:active .developer__logo {
+  opacity: 0.3;
+  fill: @theme-color;
 }
 
 @media (min-width: @tablet-width) {
