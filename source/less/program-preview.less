@@ -59,9 +59,20 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
+.program-preview__link--icon_arrow {
+  --icon: url("../img/icon-arrow.svg");
+  --icon-pos: -8px;
+
+  &:hover {
+    --icon-pos: 0;
+  }
+}
+
 .program-preview__link {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 17px;
   margin-top: 15px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -79,10 +90,11 @@
   &::after {
     position: absolute;
     content: "";
-    width: 24px;
-    height: 12px;
-    right: 6px;
-    background-image: url("../img/icon-arrow.svg");
+    right: 0;
+    block-size: 24px;
+    inline-size: 32px;
+    background: var(--icon) no-repeat var(--icon-pos, center);
+    transition: background-position 0.1s ease-out;
   }
 
   &:active {
@@ -144,15 +156,11 @@
   }
 
   .program-preview__link {
-    margin: 0;
     padding: 0;
     width: 165px;
     font-size: 20px;
     line-height: 30px;
-
-    &::after {
-      transform: translateY(70%);
-    }
+    gap: 25px;
   }
 }
 
@@ -199,5 +207,9 @@
     width: 100%;
     margin: 0;
     padding-bottom: 27px;
+  }
+
+  .program-preview__link {
+    gap: 28px;
   }
 }
