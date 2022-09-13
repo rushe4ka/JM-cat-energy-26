@@ -22,16 +22,22 @@
 }
 
 // Бургер иконка для открытия мобильного меню
-.main-nav--closed .main-nav__toggle::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 24px;
-  height: 2px;
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 2px;
 
-  background-color: #000000;
-  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    background-color: #000000;
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
 }
 
 // Крестик иконка для закрытия мобильного меню
@@ -54,6 +60,11 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.6;
   }
 }
 
