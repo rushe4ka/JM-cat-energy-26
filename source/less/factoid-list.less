@@ -10,8 +10,8 @@
 @media (min-width: @tablet-width) {
   .factoid-list {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 153px;
-    row-gap: 27px;
+    column-gap: 57px;
+    row-gap: 75px;
     counter-reset: list 0;
   }
 
@@ -22,13 +22,17 @@
       position: absolute;
       counter-increment: list;
       content: counter(list) "";
-      right: 0;
-      top: 0;
+      right: 78px;
+      top: -40px;
       font-family: @theme-font;
       font-weight: 400;
       font-size: 280px;
       line-height: 280px;
       color: @background-color;
+    }
+
+    &:first-child::after {
+      right: 102px;
     }
   }
 }
@@ -38,5 +42,15 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 79px;
     row-gap: 27px;
+  }
+
+  .factoid-list__item {
+    &::after {
+      right: 0;
+    }
+
+    &:first-child::after {
+      right: 20px;
+    }
   }
 }

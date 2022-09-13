@@ -4,15 +4,17 @@
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 18px;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: -20px;
-    width: 320px;
-    height: 1px;
-    background-color: #d9d9d9;
+.main-header__logo {
+  width: 210px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -24,10 +26,6 @@
     padding-bottom: 26px;
     margin-bottom: 0;
     gap: 10px;
-
-    &::after {
-      display: none;
-    }
   }
 
   .main-header__logo {
@@ -42,6 +40,10 @@
   }
 
   .main-header__logo {
-    width: 202px;
+    width: 232px;
+
+    & img {
+      width: 202px;
+    }
   }
 }

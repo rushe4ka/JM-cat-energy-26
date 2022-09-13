@@ -2,45 +2,53 @@
   display: flex;
   flex-direction: column;
   padding: 24px 0;
-  gap: 14px;
+  gap: 12px;
   border: none;
 }
 
-.form-block__legend--comment {
-  &::after {
-    width: 147px;
-  }
-}
-
-.form-block__legend--additional {
-  &::after {
-    width: 128px;
-  }
-}
-
-.form-block--user-data,
-.form-block--program {
+.form-block--user-data {
   position: relative;
+  margin: 0;
 
   &::after {
     position: absolute;
     content: "";
     bottom: 0;
-    left: -20px;
-    width: 320px;
+    left: -224px;
+    width: 768px;
     height: 1px;
     background-color: #d9d9d9;
   }
 }
 
+.form-block--program {
+  position: relative;
+  margin: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: -224px;
+    width: 768px;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+}
+
+.form-block--owner-data {
+  padding: 0;
+}
+
+.form-block--comment {
+  padding: 0;
+}
+
 @media (min-width: @tablet-width) {
   .form-block--user-data {
-    padding-bottom: 48px;
-    gap: 22px;
-  }
+    padding-bottom: 73px;
+    gap: 20px;
 
-  .form-block--user-data,
-  .form-block--program {
     &::after {
       display: none;
     }
@@ -48,20 +56,33 @@
 
   .form-block--program {
     padding: 25px;
+    padding-left: 29px;
     border: 1px solid #e7e7e7;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form-block--owner-data {
+    padding-top: 23px;
+    padding-bottom: 14px;
+    gap: 20px;
+  }
+
+  .form-block--comment {
+    padding-top: 24px;
+    padding-bottom: 14px;
   }
 
   .form-block--additional {
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 33px;
+    column-gap: 60px;
 
     & .form-block__inner {
-      width: 295px;
-    }
-
-    & .form-block__inner:not:last-child {
-      width: 295px;
-      margin-right: 40px;
+      width: 285px;
     }
   }
 }
@@ -71,15 +92,27 @@
     padding: 0;
   }
 
-  .form-block--additional {
-    & .form-block__inner {
-      width: 290px;
-    }
-  }
-
   .form-block--owner-data {
     display: grid;
     grid-template-columns: 570px 570px;
     gap: 80px;
+    padding-bottom: 20px;
+  }
+
+  .form-block--additional {
+    justify-content: flex-start;
+
+    & .form-block__inner {
+      width: 240px;
+      margin-right: 25px;
+    }
+
+    & .form-block__inner:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .form-block--comment {
+    padding-bottom: 20px;
   }
 }

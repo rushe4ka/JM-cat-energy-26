@@ -1,8 +1,8 @@
 .form__appeal {
   display: block;
   margin: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 0;
+  padding-bottom: 14px;
   font-family: @theme-font;
   text-transform: uppercase;
   color: #000000;
@@ -34,8 +34,13 @@
 @media (min-width: @tablet-width) {
   .form__appeal {
     padding-top: 27px;
+    padding-bottom: 40px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .form__main-data-wrap {
+    padding-bottom: 25px;
   }
 
   .form__submit-inner {
@@ -49,15 +54,20 @@
   .form__btn {
     margin: 0;
     width: 282px;
-    padding-top: 17px;
+    padding-top: 13px;
     padding-bottom: 17px;
+    font-size: 20px;
+  }
+
+  .form__note {
+    font-size: 16px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form__appeal {
-    padding-bottom: 42px;
-    font-size: 27px;
+    padding-bottom: 67px;
+    font-size: 20px;
     line-height: 30px;
   }
 
@@ -65,10 +75,12 @@
     display: grid;
     grid-template-columns: 570px 570px;
     gap: 80px;
+    padding-bottom: 20px;
   }
 
   .form__submit-inner {
     gap: 80px;
+    margin-top: 38px;
     padding-bottom: 82px;
   }
 
