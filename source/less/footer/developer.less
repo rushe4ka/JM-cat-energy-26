@@ -5,15 +5,21 @@
   align-self: stretch;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.developer__text {
   font-size: 16px;
   color: #444444;
   text-decoration: none;
 
+  &:hover .developer__logo {
+    fill: @theme-color;
+  }
+
   &:active {
     opacity: 0.3;
+  }
+
+  &:active .developer__logo {
+    opacity: 0.3;
+    fill: @theme-color;
   }
 }
 
@@ -21,21 +27,9 @@
   fill: #666666;
 }
 
-.developer__link:hover .developer__logo {
-  fill: @theme-color;
-}
-
-.developer__link:active .developer__logo {
-  opacity: 0.3;
-  fill: @theme-color;
-}
-
 @media (min-width: @tablet-width) {
   .developer {
     padding-top: 15px;
-  }
-
-  .developer__text {
-    margin-right: 22px;
+    gap: 22px;
   }
 }
