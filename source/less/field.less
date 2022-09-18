@@ -9,7 +9,7 @@
   font-family: @theme-font;
 }
 
-.field--email {
+.field__icon-email {
   position: absolute;
   content: "";
   top: 50%;
@@ -20,7 +20,7 @@
   fill: #222222;
 }
 
-.field--tel {
+.field__icon-tel {
   position: absolute;
   content: "";
   top: 50%;
@@ -69,13 +69,13 @@
   }
 }
 
-.field__input:focus + .field--email,
-.field__input:focus + .field--tel {
+.field__input:focus + .field__icon-email,
+.field__input:focus + .field__icon-tel {
   fill: @theme-color;
 }
 
-.field__input:invalid:not(:placeholder-shown) + .field--email,
-.field__input:invalid:not(:placeholder-shown) + .field--tel {
+.field__input:invalid:not(:placeholder-shown) + .field__icon-email,
+.field__input:invalid:not(:placeholder-shown) + .field__icon-tel {
   fill: #ff8282;
 }
 
@@ -111,12 +111,12 @@
     }
   }
 
-  .field--tel {
+  .field__icon-tel {
     gap: 15px;
   }
 
-  .field--email,
-  .field--tel {
+  .field__icon-email,
+  .field__icon-tel {
     right: 16px;
   }
 }
