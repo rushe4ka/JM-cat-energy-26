@@ -4,11 +4,24 @@
   align-items: center;
   padding-left: 45px;
   min-height: 30px;
+
+  &:focus-within .field-control__mark {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
+
+  // .choice-input:checked:focus + .field-control__mark {
+  //   border: 2px solid #000000;
+  // }
+
+  // .choice-input:disabled + .field-control__mark + .field-control__label {
+  //   opacity: 0.1
+  // }
+
 }
 
 .field-control__input {
   margin: 0;
-  display: none;
 }
 
 .field-control__input:disabled + .field-control__mark + .field-control__label {
