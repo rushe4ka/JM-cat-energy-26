@@ -1,19 +1,23 @@
 .benefits {
   position: relative;
-  width: 280px;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgba(105, 183, 56, 0.85);
 
-  &::before {
-    position: absolute;
-    content: "";
-    margin: auto;
-    width: 280px;
-    height: 290px;
-    background-image:
-      linear-gradient(
-        rgba(105, 183, 56, 0.85),
-        rgba(105, 183, 56, 0.85)
-      );
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   margin: auto;
+  //   width: 280px;
+  //   height: 290px;
+  //   background-image:
+  //     linear-gradient(
+  //       rgba(105, 183, 56, 0.85),
+  //       rgba(105, 183, 56, 0.85)
+  //     );
+  // }
 
   &::after {
     position: absolute;
@@ -27,24 +31,31 @@
   }
 }
 
-.benefits__text {
+.benefits__banner {
   position: absolute;
-  margin: 0;
-  width: 161px;
-  bottom: 43px;
-  left: 50%;
-  transform: translateX(-50%);
+  z-index: -1;
+  min-height: 290px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
 
+.benefits__text {
+  margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #ffffff;
+  width: 170px;
 }
 
 @media (min-width: @tablet-width) {
   .benefits {
     width: calc(@tablet-width - 60px);
     height: auto;
+    padding-top: 71px;
+    padding-bottom: 68px;
+    padding-left: 348px;
 
     &::before {
       width: 100%;
@@ -54,7 +65,8 @@
     &::after {
       width: 80px;
       height: 83px;
-      left: 77px;
+      left: 78px;
+      top: 56px;
       transform: translateX(0);
     }
   }
@@ -64,11 +76,6 @@
   }
 
   .benefits__text {
-    left: auto;
-    right: 124px;
-    bottom: auto;
-    top: 50%;
-    transform: translateY(-50%) translateX(0);
     text-align: left;
   }
 }
@@ -76,6 +83,7 @@
 @media (min-width: @desktop-width) {
   .benefits {
     width: 245px;
+    padding: 187px 40px 43px;
 
     &::before {
       height: 290px;
@@ -98,11 +106,6 @@
   }
 
   .benefits__text {
-    left: 50%;
-    right: auto;
-    top: auto;
-    bottom: 13px;
-    transform: translateY(-50%) translateX(-50%);
     text-align: center;
   }
 }
