@@ -12,9 +12,14 @@
   display: block;
   min-width: 32px;
   min-height: 26px;
+
+  &:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
 }
 
-.social__link svg {
+.social__link .social__icon {
   position: absolute;
   margin: auto;
   top: 50%;
@@ -23,11 +28,11 @@
   fill: #666666;
 }
 
-.social__link:hover svg {
+.social__link:hover .social__icon {
   fill: @theme-color;
 }
 
-.social__link:active svg {
+.social__link:active .social__icon {
   fill: @theme-color;
   opacity: 0.3;
 }
@@ -35,15 +40,15 @@
 @media (min-width: @tablet-width) {
   .social {
     justify-content: center;
-    padding-left: 37px;
+    padding-top: 0;
+    padding-left: 30px;
     padding-right: 10px;
+    padding-bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .social {
-    padding-top: 10px;
     padding-left: 0;
-    padding-right: 10px;
   }
 }

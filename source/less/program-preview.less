@@ -59,7 +59,7 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
-.program-preview__link--icon_arrow {
+.program-preview__link--icon-arrow {
   --icon: url("../img/icon-arrow.svg");
   --icon-pos: -8px;
 
@@ -99,6 +99,11 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
   }
 }
 
@@ -211,5 +216,6 @@
 
   .program-preview__link {
     gap: 28px;
+    margin-top: 0;
   }
 }

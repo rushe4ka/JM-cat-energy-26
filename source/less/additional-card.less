@@ -17,6 +17,11 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #222222;
+
+  &:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
 }
 
 .additional-card__info-table {
@@ -24,6 +29,10 @@
   display: flex;
   justify-content: space-between;
   line-height: 14px;
+}
+
+.additional-card__value {
+  text-align: right;
 }
 
 .additional-card__btn {
@@ -37,7 +46,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 27px 37px;
-    padding-bottom: 26px;
     border: 1px solid #cdcdcd;
     border-bottom: none;
   }
@@ -50,9 +58,13 @@
   .additional-card__info-table {
     margin-bottom: 19px;
     padding-top: 5px;
-    gap: 50px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .additional-card__value {
+    min-width: 43px;
+    margin-left: 50px;
   }
 }
 

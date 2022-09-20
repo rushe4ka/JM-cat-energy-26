@@ -8,6 +8,7 @@
 
 .main-header__logo {
   width: 210px;
+  flex-shrink: 0;
 
   &:hover {
     opacity: 0.8;
@@ -15,6 +16,11 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
   }
 }
 
