@@ -1,23 +1,20 @@
 .benefits {
   position: relative;
-  padding-top: 187px;
-  padding-bottom: 43px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: rgba(105, 183, 56, 0.85);
 
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   margin: auto;
-  //   width: 280px;
-  //   height: 290px;
-  //   background-image:
-  //     linear-gradient(
-  //       rgba(105, 183, 56, 0.85),
-  //       rgba(105, 183, 56, 0.85)
-  //     );
-  // }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 280px;
+    height: 100%;
+    background-image:
+      linear-gradient(
+        rgba(105, 183, 56, 0.85),
+        rgba(105, 183, 56, 0.85)
+      );
+  }
 
   &::after {
     position: absolute;
@@ -32,16 +29,15 @@
 }
 
 .benefits__banner {
-  position: absolute;
-  z-index: -1;
   min-height: 290px;
   width: 100%;
-  top: 0;
-  left: 0;
 }
 
 .benefits__text {
+  position: relative;
   margin: 0 auto;
+  margin-top: -100px;
+  padding-bottom: 43px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
