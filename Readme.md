@@ -2,6 +2,7 @@
 
 * Студент: [Julia Markova](https://up.htmlacademy.ru/adaptive/26/user/488405).
 * Наставник: `Валя Видяева`.
+* Технологии: HTML5 / CSS3, JS, Gulp
 
 ---
 
